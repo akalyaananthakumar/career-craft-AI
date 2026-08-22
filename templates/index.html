@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CareerCraft AI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">🤖 CareerCraft AI</div>
+    <div class="tag">Explore careers, build skills and prepare for internships and interviews.</div>
+    <button class="new-chat" id="newChat">＋ New Chat</button>
+    <div class="sidebar-info">Powered by Gemini<br>Educational AI assistant</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="title">CareerCraft AI</div><div class="status">● Online</div>
+    </header>
+    <section class="chat" id="chat">
+      <div class="welcome">
+        <h1>How can I help?</h1>
+        <p>Ask a question and get a focused AI response.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-text="How do I choose an AI career path?">How do I choose an AI career path?</button>
+          <button class="suggestion" data-text="Give me an internship roadmap">Give me an internship roadmap</button>
+          <button class="suggestion" data-text="How can I improve my resume?">How can I improve my resume?</button>
+          <button class="suggestion" data-text="Ask me 5 interview questions">Ask me 5 interview questions</button>
+        </div>
+      </div>
+    </section>
+    <section class="composer">
+      <form class="form" id="chatForm">
+        <textarea id="message" placeholder="Ask about careers, skills, resumes, internships, or interview preparation..." rows="1"></textarea>
+        <button class="send" id="send" type="submit">Send</button>
+      </form>
+      <div class="note">AI responses can be inaccurate. Verify important information.</div>
+    </section>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
